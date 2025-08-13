@@ -136,3 +136,45 @@ footer {
   width: 60px;
   height: 60px;
 }
+
+/* Menu padrão em desktop */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Telas menores: esconde menu e mostra ícone hamburger */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav.show {
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
